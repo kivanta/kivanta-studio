@@ -1,0 +1,247 @@
+<section class="about" id="about">
+  <div class="about-inner">
+
+    <div class="about-heading">
+      <p class="section-label">ABOUT KIVANTA</p>
+
+      <h2>
+        Small studio.<br />
+        Serious intent.
+      </h2>
+    </div>
+
+
+    <div class="about-content">
+
+      <p class="about-lead">
+        Kivanta Studio is an independent digital studio for focused products,
+        clear websites, and practical systems.
+      </p>
+
+      <p class="about-copy">
+        We start with the problem, remove what does not matter, and build
+        the simplest version that can earn attention, trust, or use.
+      </p>
+
+
+      <div class="principles">
+
+        <div class="principle">
+          <span>01</span>
+
+          <h3>Clarity before complexity</h3>
+
+          <p>
+            Every project starts with a clear problem, audience,
+            and desired outcome.
+          </p>
+        </div>
+
+
+        <div class="principle">
+          <span>02</span>
+
+          <h3>Lean by default</h3>
+
+          <p>
+            We keep the first version focused before adding
+            complexity or automation.
+          </p>
+        </div>
+
+
+        <div class="principle">
+          <span>03</span>
+
+          <h3>Ship to learn</h3>
+
+          <p>
+            Real use teaches us more than ideas that never leave the page.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+  .about {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background: #e9e7e1;
+    color: #111111;
+  }
+
+
+  .about-inner {
+    width: min(1240px, calc(100% - 64px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 72px;
+
+    padding: 48px 0;
+  }
+
+
+  .section-label {
+    margin: 0 0 18px;
+
+    color: #77756f;
+
+    font-size: 0.66rem;
+    font-weight: 650;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 4.6vw, 5rem);
+    font-weight: 520;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+  }
+
+
+  .about-content {
+    align-self: center;
+  }
+
+
+  .about-lead {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.025em;
+  }
+
+
+  .about-copy {
+    max-width: 650px;
+
+    margin: 18px 0 26px;
+
+    color: #64625d;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+  }
+
+
+  .principle {
+    min-height: 175px;
+
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+  }
+
+
+  .principle span {
+    color: #99968f;
+
+    font-size: 0.66rem;
+  }
+
+
+  .principle h3 {
+    margin: auto 0 10px;
+
+    font-size: 1rem;
+    font-weight: 580;
+
+    letter-spacing: -0.02em;
+  }
+
+
+  .principle p {
+    margin: 0;
+
+    color: #6b6963;
+
+    font-size: 0.82rem;
+
+    line-height: 1.55;
+  }
+
+
+  @media (max-width: 900px) {
+
+    .about {
+      min-height: auto;
+    }
+
+
+    .about-inner {
+      grid-template-columns: 1fr;
+
+      gap: 54px;
+
+      padding: 84px 0;
+    }
+
+
+    .principles {
+      grid-template-columns: 1fr;
+    }
+
+
+    .principle {
+      min-height: 150px;
+    }
+
+  }
+
+
+  @media (max-width: 600px) {
+
+    .about-inner {
+      width: calc(100% - 32px);
+
+      padding: 72px 0;
+    }
+
+
+    h2 {
+      font-size: clamp(2.7rem, 13vw, 4rem);
+    }
+
+
+    .about-lead {
+      font-size: 1.35rem;
+    }
+
+  }
+</style>

@@ -1,0 +1,241 @@
+---
+const navLinks = [
+  { label: "Work", href: "#work" },
+  { label: "Services", href: "#services" },
+  { label: "About", href: "#about" }
+];
+---
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="/" aria-label="Kivanta Studio home">
+      Kivanta Studio
+    </a>
+
+    <div class="desktop-nav">
+      <div class="nav-links">
+        {
+          navLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+      </div>
+
+      <a class="nav-cta" href="#contact">
+        Start a project
+      </a>
+    </div>
+
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation menu">
+        Menu
+      </summary>
+
+      <div class="mobile-panel">
+        {
+          navLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+
+        <a class="mobile-cta" href="#contact">
+          Start a project
+        </a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    width: 100%;
+    background: #090909;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navbar {
+    width: min(1240px, calc(100% - 64px));
+    height: 72px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    color: #f7f7f7;
+    font-size: 0.98rem;
+    font-weight: 650;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .nav-links a {
+    color: #9b9b9b;
+    font-size: 0.875rem;
+    font-weight: 450;
+    text-decoration: none;
+
+    transition: color 160ms ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    color: #ffffff;
+  }
+
+  .nav-cta {
+    height: 40px;
+    padding: 0 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f5f5f5;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 999px;
+
+    transition:
+      background 160ms ease,
+      border-color 160ms ease;
+  }
+
+  .nav-cta:hover,
+  .nav-cta:focus-visible {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .mobile-menu {
+    display: none;
+    position: relative;
+  }
+
+  .mobile-menu summary {
+    color: #f5f5f5;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-panel {
+    position: absolute;
+    z-index: 100;
+
+    top: 42px;
+    right: 0;
+
+    width: 220px;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    background: #111111;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  }
+
+  .mobile-panel a {
+    padding: 10px;
+
+    color: #a8a8a8;
+    font-size: 0.9rem;
+
+    text-decoration: none;
+  }
+
+  .mobile-panel a:hover {
+    color: #ffffff;
+  }
+
+  .mobile-cta {
+    margin-top: 6px;
+    font-family: inherit;
+    font-weight: 500;
+
+    color: #ffffff !important;
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+  }
+
+  @media (max-width: 720px) {
+    .navbar {
+      width: calc(100% - 32px);
+      height: 64px;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+  }
+</style>
+
+
+<script>
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  if (mobileMenu instanceof HTMLDetailsElement) {
+    const links = mobileMenu.querySelectorAll("a");
+    const summary = mobileMenu.querySelector("summary");
+
+    // Close after choosing a navigation link.
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.removeAttribute("open");
+      });
+    });
+
+    // Close when clicking outside the menu.
+    document.addEventListener("click", (event) => {
+      if (
+        mobileMenu.open &&
+        event.target instanceof Node &&
+        !mobileMenu.contains(event.target)
+      ) {
+        mobileMenu.removeAttribute("open");
+      }
+    });
+
+    // Close with Escape.
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu.open) {
+        mobileMenu.removeAttribute("open");
+        summary?.focus();
+      }
+    });
+  }
+</script>

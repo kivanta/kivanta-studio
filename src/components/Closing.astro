@@ -1,0 +1,437 @@
+---
+const year = new Date().getFullYear();
+
+const footerLinks = [
+  { label: "Work", href: "#work" },
+  { label: "Services", href: "#services" },
+  { label: "About", href: "#about" }
+];
+
+const socialLinks = [
+  { label: "X", href: "https://x.com/KivantaStudio" },
+  { label: "Instagram", href: "https://instagram.com/KivantaStudio" },
+  { label: "LinkedIn", href: "https://linkedin.com" }
+];
+---
+
+<section class="closing" id="contact">
+
+  <div class="closing-inner">
+
+    <div class="closing-copy">
+      <p class="section-label">START A PROJECT</p>
+
+      <h2>
+        Have something<br />
+        worth making real?
+      </h2>
+
+      <p>
+       Bring us a focused idea, a messy digital problem,
+       or a product that needs a sharper digital home.
+      </p>
+    </div>
+
+    <a class="closing-cta" href="#contact">
+      <span>Start a project</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="/">Kivanta Studio</a>
+
+      <p>
+        Independent digital studio.
+      </p>
+    </div>
+
+
+    <div class="footer-nav">
+
+      <div>
+        <span class="footer-label">NAVIGATE</span>
+
+        {
+          footerLinks.map((link) => (
+            <a href={link.href}>
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+
+
+      <div>
+        <span class="footer-label">SOCIAL</span>
+
+        {
+          socialLinks.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+    <span>© {year} Kivanta Studio</span>
+
+    <span>Built for the web.</span>
+  </div>
+
+</footer>
+
+
+<style>
+
+  .closing {
+    min-height: 62vh;
+
+    display: flex;
+    align-items: center;
+
+    background: #0a0a0a;
+    color: #ffffff;
+  }
+
+
+  .closing-inner {
+    width: min(1240px, calc(100% - 64px));
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding: 58px 0;
+  }
+
+
+  .section-label {
+    margin: 0 0 18px;
+
+    color: #707070;
+
+    font-size: 0.66rem;
+    font-weight: 650;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  h2 {
+    margin: 0;
+
+    font-size: clamp(3.5rem, 6vw, 6.4rem);
+    font-weight: 520;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.06em;
+  }
+
+
+  .closing-copy > p:last-child {
+    max-width: 520px;
+
+    margin: 20px 0 0;
+
+    color: #8c8c8c;
+
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+  }
+
+
+  .closing-cta {
+    width: 170px;
+    height: 170px;
+
+    flex: 0 0 auto;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    color: #111111;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    background: #f2f1ed;
+
+    transition:
+      transform 180ms ease,
+      background 180ms ease;
+  }
+
+
+  .closing-cta:hover {
+    transform: rotate(-4deg) scale(1.03);
+
+    background: #ffffff;
+  }
+
+
+  .closing-cta span:last-child {
+    align-self: flex-end;
+
+    font-size: 1.3rem;
+  }
+
+
+  .footer {
+    padding: 52px 0 26px;
+
+    background: #0a0a0a;
+    color: #ffffff;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+
+  .footer-inner,
+  .footer-bottom {
+    width: min(1240px, calc(100% - 64px));
+    margin: 0 auto;
+  }
+
+
+  .footer-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding-bottom: 46px;
+  }
+
+
+  .footer-brand > a {
+    color: #ffffff;
+
+    font-size: 1.05rem;
+    font-weight: 650;
+
+    text-decoration: none;
+  }
+
+
+  .footer-brand p {
+    margin: 10px 0 0;
+
+    color: #666666;
+
+    font-size: 0.8rem;
+  }
+
+
+  .footer-nav {
+    display: flex;
+
+    gap: 76px;
+  }
+
+
+  .footer-nav > div {
+    min-width: 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .footer-label {
+    margin-bottom: 8px;
+
+    color: #555555;
+
+    font-size: 0.6rem;
+    font-weight: 650;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .footer-nav a {
+    color: #989898;
+
+    font-size: 0.83rem;
+
+    text-decoration: none;
+  }
+
+
+  .footer-nav a:hover {
+    color: #ffffff;
+  }
+
+
+  .footer-bottom {
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #555555;
+
+    font-size: 0.68rem;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+
+  @media (max-width: 800px) {
+
+    .closing {
+      min-height: auto;
+    }
+
+
+    .closing-inner {
+      flex-direction: column;
+      align-items: flex-start;
+
+      padding: 58px 0;
+    }
+
+
+    .closing-cta {
+      width: 160px;
+      height: 160px;
+    }
+
+
+    .footer-inner {
+      flex-direction: column;
+
+      gap: 48px;
+    }
+
+  }
+
+
+  @media (max-width: 600px) {
+
+    .closing-inner,
+    .footer-inner,
+    .footer-bottom {
+      width: calc(100% - 32px);
+    }
+
+
+    h2 {
+      font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+
+    .footer-nav {
+      width: 100%;
+
+      justify-content: space-between;
+
+      gap: 40px;
+    }
+
+
+    .footer-bottom {
+      flex-direction: column;
+
+      gap: 8px;
+    }
+
+  }
+
+</style>
+
+
+<style is:global>
+  @media (min-width: 801px) {
+
+    /* CTA + Footer together = one viewport */
+
+    .closing {
+      height: 58svh;
+      min-height: 0;
+    }
+
+    .closing-inner {
+      height: 100%;
+
+      padding: 36px 0;
+
+      align-items: center;
+    }
+
+    .closing-copy h2 {
+      font-size: clamp(3.2rem, 5.2vw, 5.5rem);
+    }
+
+    .closing-copy > p:last-child {
+      margin-top: 16px;
+    }
+
+    .closing-cta {
+      width: 150px;
+      height: 150px;
+
+      padding: 22px;
+    }
+
+
+    .footer {
+      height: 42svh;
+
+      padding: 32px 0 18px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-inner {
+      flex: 1;
+
+      padding-bottom: 24px;
+    }
+
+    .footer-nav {
+      gap: 64px;
+    }
+
+    .footer-bottom {
+      padding-top: 16px;
+    }
+
+  }
+</style>
