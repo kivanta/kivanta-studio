@@ -1,708 +1,320 @@
-<section class="hero">
-  <div class="hero-inner">
+---
+const desktopPreview = "/images/work/towswift-desktop.png";
+const mobilePreview = "/images/work/towswift-mobile.png";
+---
 
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow">
-        INDEPENDENT DIGITAL STUDIO
+      <p class="hero-eyebrow">
+        Independent web design studio
       </p>
 
-      <h1>
-        We build clear digital products that earn their place.
+      <h1 id="hero-title">
+        Good businesses deserve a great website.
       </h1>
 
       <p class="hero-description">
-        Kivanta Studio designs premium websites, focused web products,
-        and practical systems for ideas that need to become real.
+        Thoughtful websites that help people understand your business,
+        trust your work, and get in touch.
       </p>
 
       <div class="hero-actions">
-        <a class="primary-button" href="#work">
-          View our work
-        </a>
-
-        <a class="secondary-button" href="#contact">
-          Start a project
+        <a class="hero-primary" href="#contact">
+          Discuss your project
           <span aria-hidden="true">↗</span>
         </a>
+
+        <a class="hero-secondary" href="#work">
+          Explore our work
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
+
+      <p class="hero-note">
+        Clear communication. Care in every detail.
+      </p>
     </div>
 
+    <figure class="hero-showcase">
+      <div class="device-stage">
+        <!-- Desktop screenshot retains its original proportions. -->
+        <div class="desktop-device">
+          <div class="desktop-screen">
+            <img
+              src={desktopPreview}
+              alt="TowSwift concept website on desktop, showing its towing services and contact buttons."
+              width="987"
+              height="840"
+              fetchpriority="high"
+            />
+          </div>
 
-    <div class="build-board" aria-label="Selected Kivanta Studio projects">
-
-      <div class="board-top">
-        <div>
-          <span class="board-label">KIVANTA STUDIO</span>
-          <p>Build stack</p>
+          <div class="desktop-stand" aria-hidden="true"></div>
+          <div class="desktop-base" aria-hidden="true"></div>
         </div>
 
-        <span class="live-badge">
-          <span class="live-dot"></span>
-          BUILDING
-        </span>
+        <!-- Mobile screenshot retains its original proportions. -->
+        <div class="phone-device">
+          <div class="phone-screen">
+            <img
+              src={mobilePreview}
+              alt="Mobile version of the TowSwift concept website."
+              width="472"
+              height="828"
+            />
+          </div>
+        </div>
       </div>
 
-
-      <div class="project-stack">
-
-        <a class="project-card" href="#work">
-          <div class="project-number">01</div>
-
-          <div class="project-info">
-            <span>PRODUCT</span>
-            <h2>Kivanta Scout</h2>
-            <p>Evidence-first tooling for understanding public agent code.</p>
-          </div>
-
-          <span class="arrow">↗</span>
-        </a>
-
-
-        <a class="project-card" href="#work">
-          <div class="project-number">02</div>
-
-          <div class="project-info">
-            <span>MARKETPLACE</span>
-            <h2>CityDomainMarket</h2>
-            <p>A focused marketplace for local digital brands and domains.</p>
-          </div>
-
-          <span class="arrow">↗</span>
-        </a>
-
-
-        <a class="project-card" href="#work">
-          <div class="project-number">03</div>
-
-          <div class="project-info">
-            <span>LOCAL SEARCH</span>
-            <h2>NearRankPro</h2>
-            <p>Simple systems for local visibility and search presence.</p>
-          </div>
-
-          <span class="arrow">↗</span>
-        </a>
-
-      </div>
-
-
-      <div class="board-footer">
-        <span>Independent studio</span>
-        <span>Built for the web</span>
-      </div>
-
-    </div>
-
+      <figcaption>
+        TowSwift <span aria-hidden="true">—</span> Concept project
+      </figcaption>
+    </figure>
   </div>
 </section>
 
-
 <style>
   .hero {
-    min-height: calc(100vh - 72px);
-
-    display: flex;
-    align-items: center;
-
-    overflow: hidden;
-
-    background:
-      radial-gradient(
-        circle at 72% 45%,
-        rgba(92, 110, 255, 0.08),
-        transparent 30%
-      ),
-      #090909;
-
-    color: #ffffff;
+    background: var(--page-bg);
+    color: var(--text-primary);
   }
-
 
   .hero-inner {
-    width: min(1240px, calc(100% - 64px));
+    width: min(var(--container), calc(100% - 64px));
     margin: 0 auto;
+    padding: 56px 0;
 
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
     align-items: center;
-
-    gap: 72px;
-
-    padding: 64px 0 72px;
+    gap: clamp(32px, 4vw, 64px);
   }
 
-
-  .hero-copy {
-    max-width: 700px;
+  .hero-copy,
+  .hero-showcase {
+    min-width: 0;
   }
 
-
-  .eyebrow {
-    margin: 0 0 22px;
-
-    color: #818181;
-
+  .hero-eyebrow {
+    margin: 0 0 18px;
+    color: var(--text-secondary);
     font-size: 0.7rem;
     font-weight: 600;
-
+    line-height: 1.5;
     letter-spacing: 0.15em;
+    text-transform: uppercase;
   }
 
-
-  h1 {
+  #hero-title {
     margin: 0;
-
-    max-width: 760px;
-
-    font-size: clamp(3rem, 5.3vw, 5.4rem);
-    font-weight: 540;
-
-    line-height: 0.98;
-
+    color: var(--text-primary);
+    font-size: clamp(2rem, 3.6vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.08;
     letter-spacing: -0.055em;
   }
 
-
   .hero-description {
-    max-width: 570px;
-
-    margin: 28px 0 0;
-
-    color: #a4a4a4;
-
-    font-size: 1.04rem;
-
-    line-height: 1.7;
+    max-width: 450px;
+    margin: 20px 0 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.65;
   }
-
 
   .hero-actions {
-    margin-top: 36px;
-
+    margin-top: 24px;
     display: flex;
     align-items: center;
-
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 14px 24px;
   }
 
-
-  .primary-button,
-  .secondary-button {
+  .hero-primary,
+  .hero-secondary {
     min-height: 48px;
-
-    padding: 0 20px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
 
-    gap: 9px;
-
-    font-family: inherit;
     font-size: 0.9rem;
-    font-weight: 550;
-
-    border-radius: 999px;
-
+    font-weight: 500;
+    line-height: 1.4;
     text-decoration: none;
-
-    transition:
-      transform 160ms ease,
-      background 160ms ease,
-      border-color 160ms ease;
   }
 
-
-  .primary-button {
-    background: #f5f5f5;
-    color: #111111;
+  .hero-primary {
+    padding: 13px 20px;
+    color: var(--accent-text);
+    background: var(--accent);
+    border: 1px solid transparent;
+    border-radius: 8px;
   }
 
-
-  .primary-button:hover {
-    transform: translateY(-2px);
-    background: #ffffff;
+  .hero-primary:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
-
-  .secondary-button {
-    color: #e7e7e7;
-
-    border: 1px solid rgba(255, 255, 255, 0.14);
+  .hero-secondary {
+    color: var(--accent);
   }
 
-
-  .secondary-button:hover {
-    transform: translateY(-2px);
-
-    border-color: rgba(255, 255, 255, 0.28);
-
-    background: rgba(255, 255, 255, 0.05);
+  .hero-secondary:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
-
-  .build-board {
-    padding: 22px;
-
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 26px;
-
-    background:
-      linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.035),
-        rgba(255, 255, 255, 0.01)
-      );
-  }
-
-
-  .board-top {
-    min-height: 64px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    padding: 2px 2px 18px;
-  }
-
-
-  .board-label {
-    color: #696969;
-
-    font-size: 0.64rem;
-    font-weight: 650;
-
-    letter-spacing: 0.15em;
-  }
-
-
-  .board-top p {
-    margin: 5px 0 0;
-
-    color: #f1f1f1;
-
-    font-size: 1.05rem;
-    font-weight: 550;
-  }
-
-
-  .live-badge {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 7px;
-
-    padding: 7px 10px;
-
-    color: #919191;
-
-    font-size: 0.62rem;
-    font-weight: 650;
-
-    letter-spacing: 0.08em;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 999px;
-  }
-
-
-  .live-dot {
-    width: 7px;
-    height: 7px;
-
-    border-radius: 50%;
-
-    background: #62d9a4;
-
-    box-shadow: 0 0 0 5px rgba(98, 217, 164, 0.07);
-  }
-
-
-  .project-stack {
-    display: flex;
-    flex-direction: column;
-
-    gap: 9px;
-  }
-
-
-  .project-card {
-    min-height: 112px;
-
-    padding: 18px;
-
-    display: grid;
-    grid-template-columns: 34px 1fr auto;
-
-    align-items: center;
-
-    gap: 14px;
-
-    color: inherit;
-    text-decoration: none;
-
-    border: 1px solid rgba(255, 255, 255, 0.075);
-    border-radius: 17px;
-
-    background: rgba(255, 255, 255, 0.018);
-
-    transition:
-      transform 180ms ease,
-      background 180ms ease,
-      border-color 180ms ease;
-  }
-
-
-  .project-card:hover {
-    transform: translateX(4px);
-
-    background: rgba(255, 255, 255, 0.035);
-
-    border-color: rgba(255, 255, 255, 0.14);
-  }
-
-
-  .project-number {
-    color: #555555;
-
-    font-size: 0.68rem;
-
-    align-self: flex-start;
-
-    padding-top: 3px;
-  }
-
-
-  .project-info span {
-    color: #626262;
-
-    font-size: 0.62rem;
-    font-weight: 650;
-
-    letter-spacing: 0.11em;
-  }
-
-
-  .project-info h2 {
-    margin: 5px 0 5px;
-
-    color: #eeeeee;
-
-    font-size: 1rem;
-    font-weight: 550;
-
-    letter-spacing: -0.02em;
-  }
-
-
-  .project-info p {
-    margin: 0;
-
-    color: #818181;
-
+  .hero-note {
+    margin: 16px 0 0;
+    color: var(--text-secondary);
     font-size: 0.78rem;
+    line-height: 1.6;
+  }
 
+  .hero-showcase {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    justify-self: center;
+  }
+
+  .device-stage {
+    position: relative;
+    padding: 16px 38px 24px 0;
+  }
+
+  .desktop-device {
+    width: 100%;
+  }
+
+  .desktop-screen {
+    overflow: hidden;
+    background: #0b1015;
+    border: 6px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgb(0 0 0 / 12%);
+  }
+
+  /* Auto height prevents cropping or stretching either screenshot. */
+  .desktop-screen img,
+  .phone-screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-stand {
+    width: 20%;
+    height: 30px;
+    margin: 0 auto;
+    background: var(--line);
+    clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%);
+  }
+
+  .desktop-base {
+    width: 38%;
+    height: 7px;
+    margin: 0 auto;
+    background: var(--line);
+    border-radius: 50%;
+  }
+
+  .phone-device {
+    position: absolute;
+    right: 0;
+    bottom: 21px;
+
+    width: 29%;
+    padding: 5px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 20%);
+  }
+
+  .phone-screen {
+    overflow: hidden;
+    background: #0b1015;
+    border-radius: 14px;
+  }
+
+  figcaption {
+    margin-top: 4px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
     line-height: 1.5;
+    text-align: center;
   }
 
-
-  .arrow {
-    color: #696969;
-
-    font-size: 0.9rem;
-  }
-
-
-  .board-footer {
-    padding: 18px 3px 1px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    color: #555555;
-
-    font-size: 0.68rem;
-  }
-
-
-  @media (max-width: 1000px) {
-
+  /* Desktop: navbar and hero share the opening viewport. */
+  @media (min-width: 901px) {
     .hero {
-      min-height: auto;
+      min-height: calc(100svh - 73px);
+      display: flex;
+      align-items: center;
     }
 
+    .hero-inner {
+      padding: clamp(20px, 4svh, 48px) 0;
+    }
 
+    .hero-showcase {
+      max-width: min(500px, 65svh);
+    }
+  }
+
+  /* Responsive foundations for our later tablet/mobile review. */
+  @media (max-width: 900px) {
     .hero-inner {
       grid-template-columns: 1fr;
-
-      gap: 54px;
-
-      padding: 72px 0;
+      gap: 36px;
     }
-
 
     .hero-copy {
-      max-width: 780px;
+      max-width: 620px;
     }
 
-
-    .build-board {
-      max-width: 760px;
+    #hero-title {
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
     }
-
   }
 
-
   @media (max-width: 600px) {
-
     .hero-inner {
       width: calc(100% - 32px);
-
-      padding: 58px 0 64px;
+      padding: 42px 0 48px;
+      gap: 28px;
     }
 
-
-    h1 {
-      font-size: clamp(2.7rem, 13vw, 4rem);
+    .hero-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
     }
 
-
-    .hero-description {
-      font-size: 1rem;
+    #hero-title {
+      font-size: clamp(2rem, 9vw, 3rem);
     }
-
 
     .hero-actions {
       flex-direction: column;
       align-items: stretch;
+      gap: 8px;
     }
 
-
-    .primary-button,
-    .secondary-button {
-      width: 100%;
+    .device-stage {
+      padding-right: 26px;
     }
 
-
-    .build-board {
-      padding: 14px;
-
-      border-radius: 20px;
+    .phone-device {
+      width: 32%;
+      border-radius: 16px;
     }
 
-
-    .project-card {
-      grid-template-columns: 28px 1fr auto;
-
-      padding: 15px;
-    }
-
-
-    .project-info p {
-      font-size: 0.74rem;
-    }
-
-  }
-</style>
-
-<style is:global>
-  .build-board a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .build-board {
-    padding: 22px;
-
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 26px;
-
-    background:
-      linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.035),
-        rgba(255, 255, 255, 0.01)
-      );
-  }
-
-  .board-top {
-    min-height: 64px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    padding: 2px 2px 18px;
-  }
-
-  .board-label {
-    color: #696969;
-
-    font-size: 0.64rem;
-    font-weight: 650;
-
-    letter-spacing: 0.15em;
-  }
-
-  .board-top p {
-    margin: 5px 0 0;
-
-    color: #f1f1f1;
-
-    font-size: 1.05rem;
-    font-weight: 550;
-  }
-
-  .live-badge {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 7px;
-
-    padding: 7px 10px;
-
-    color: #919191;
-
-    font-size: 0.62rem;
-    font-weight: 650;
-
-    letter-spacing: 0.08em;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 999px;
-  }
-
-  .live-dot {
-    width: 7px;
-    height: 7px;
-
-    border-radius: 50%;
-
-    background: #62d9a4;
-  }
-
-  .project-stack {
-    display: flex;
-    flex-direction: column;
-
-    gap: 9px;
-  }
-
-  .project-card {
-    min-height: 112px;
-
-    padding: 18px;
-
-    display: grid;
-    grid-template-columns: 34px 1fr auto;
-
-    align-items: center;
-
-    gap: 14px;
-
-    border: 1px solid rgba(255, 255, 255, 0.075);
-    border-radius: 17px;
-
-    background: rgba(255, 255, 255, 0.018);
-
-    transition:
-      transform 180ms ease,
-      background 180ms ease,
-      border-color 180ms ease;
-  }
-
-  .project-card:hover {
-    transform: translateX(4px);
-
-    background: rgba(255, 255, 255, 0.04);
-
-    border-color: rgba(255, 255, 255, 0.14);
-  }
-
-  .project-number {
-    align-self: flex-start;
-
-    padding-top: 3px;
-
-    color: #555555;
-
-    font-size: 0.68rem;
-  }
-
-  .project-info span {
-    color: #626262;
-
-    font-size: 0.62rem;
-    font-weight: 650;
-
-    letter-spacing: 0.11em;
-  }
-
-  .project-info h2 {
-    margin: 5px 0;
-
-    color: #eeeeee;
-
-    font-size: 1rem;
-    font-weight: 550;
-
-    letter-spacing: -0.02em;
-  }
-
-  .project-info p {
-    margin: 0;
-
-    color: #818181;
-
-    font-size: 0.78rem;
-
-    line-height: 1.5;
-  }
-
-  .arrow {
-    color: #696969;
-
-    font-size: 0.9rem;
-  }
-
-  .board-footer {
-    padding: 18px 3px 1px;
-
-    display: flex;
-    justify-content: space-between;
-
-    color: #555555;
-
-    font-size: 0.68rem;
-  }
-</style>
-
-<style is:global>
-  @media (min-width: 1001px) {
-    .hero {
-      height: calc(100svh - 72px);
-      min-height: 0;
-    }
-
-    .hero-inner {
-      height: 100%;
-      padding: 42px 0 48px;
-      gap: 64px;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 4.7vw, 4.9rem);
-    }
-
-    .hero-description {
-      margin-top: 20px;
-    }
-
-    .hero-actions {
-      margin-top: 26px;
+    .phone-screen {
+      border-radius: 11px;
     }
   }
 </style>

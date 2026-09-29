@@ -1,0 +1,681 @@
+<section class="journal" id="journal">
+  <div class="journal-inner">
+
+    <!-- HEADER -->
+    <div class="journal-heading">
+
+      <div>
+        <p class="section-label">
+          FROM THE JOURNAL
+        </p>
+
+        <h2>
+          A little thinking<br />
+          behind the work.
+        </h2>
+      </div>
+
+
+      <a class="journal-link" href="/blog">
+        Explore the Journal
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </div>
+
+
+    <!-- ARTICLES -->
+    <div class="journal-grid">
+
+      <!-- ARTICLE 01 -->
+      <a class="article-card" href="/blog">
+
+        <div class="article-visual visual-light">
+
+          <div class="visual-copy">
+            Less noise.<br />
+            More clarity.
+          </div>
+
+          <svg
+            class="mountains mountains-light"
+            viewBox="0 0 800 260"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path d="M0 238 L105 170 L180 214 L280 125 L365 205 L470 102 L560 195 L655 145 L800 225 L800 260 L0 260 Z" />
+            <path d="M0 248 L130 205 L215 230 L325 175 L420 225 L520 165 L625 220 L720 190 L800 220" />
+          </svg>
+
+        </div>
+
+
+        <div class="article-meta">
+          <span>STUDIO NOTES</span>
+          <span>4 MIN READ</span>
+        </div>
+
+
+        <h3>
+          What makes a business website easy to use?
+        </h3>
+
+
+        <p>
+          A practical look at what helps visitors understand
+          your business and take the next step.
+        </p>
+
+
+        <span class="article-arrow" aria-hidden="true">
+          ↗
+        </span>
+
+      </a>
+
+
+
+      <!-- ARTICLE 02 -->
+      <a class="article-card" href="/blog">
+
+        <div class="article-visual visual-dark">
+
+          <div class="visual-copy">
+            Clarity turns<br />
+            evidence into<br />
+            progress.
+          </div>
+
+          <svg
+            class="mountains mountains-dark"
+            viewBox="0 0 800 260"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path d="M325 260 L520 50 L680 260 Z" />
+            <path d="M470 260 L610 108 L800 260 Z" />
+          </svg>
+
+        </div>
+
+
+        <div class="article-meta">
+          <span>PRODUCT THINKING</span>
+          <span>5 MIN READ</span>
+        </div>
+
+
+        <h3>
+          The thinking behind Kivanta Scout
+        </h3>
+
+
+        <p>
+          How a simple idea grew into a focused tool for
+          understanding public evidence before making claims.
+        </p>
+
+
+        <span class="article-arrow" aria-hidden="true">
+          ↗
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+  /* =========================================================
+     SECTION
+     ========================================================= */
+
+  .journal {
+    background:
+      var(--page-bg, #f2f4f8);
+
+    color:
+      var(--text-primary, #17243b);
+  }
+
+
+  .journal-inner {
+    width:
+      min(1240px, calc(100% - 64px));
+
+    margin: 0 auto;
+
+    padding:
+      clamp(92px, 10vw, 140px)
+      0
+      clamp(96px, 10vw, 144px);
+  }
+
+
+
+  /* =========================================================
+     HEADER
+     ========================================================= */
+
+  .journal-heading {
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 60px;
+  }
+
+
+  .section-label {
+    margin:
+      0
+      0
+      14px;
+
+    color:
+      var(--accent, #315bd6);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+  }
+
+
+  .journal-heading h2 {
+    margin: 0;
+
+    color:
+      var(--text-primary, #17243b);
+
+    font-size:
+      clamp(3rem, 5vw, 5rem);
+
+    font-weight: 520;
+
+    line-height: 0.96;
+
+    letter-spacing: -0.055em;
+  }
+
+
+  .journal-link {
+    margin-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color:
+      var(--accent, #315bd6);
+
+    font-size: 0.84rem;
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+
+  .journal-link span {
+    transition:
+      transform 180ms ease;
+  }
+
+
+  .journal-link:hover span {
+    transform:
+      translateX(4px);
+  }
+
+
+
+  /* =========================================================
+     GRID
+     ========================================================= */
+
+  .journal-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+
+
+  /* =========================================================
+     ARTICLE
+     ========================================================= */
+
+  .article-card {
+    position: relative;
+
+    min-width: 0;
+
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+  .article-visual {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border:
+      1px solid
+      var(--line, rgba(23, 36, 59, 0.08));
+
+    border-radius: 24px;
+  }
+
+
+  .visual-light {
+    background:
+      linear-gradient(
+        145deg,
+        #edf3ff 0%,
+        #dce8fa 58%,
+        #cfdff5 100%
+      );
+  }
+
+
+  .visual-dark {
+    background:
+      radial-gradient(
+        circle at 78% 15%,
+        rgba(58, 112, 215, 0.32),
+        transparent 34%
+      ),
+      linear-gradient(
+        145deg,
+        #111b2b,
+        #08111d
+      );
+  }
+
+
+  .visual-copy {
+    position: relative;
+
+    z-index: 2;
+
+    padding:
+      34px
+      36px;
+
+    font-size:
+      clamp(1.8rem, 3vw, 2.8rem);
+
+    font-weight: 500;
+
+    line-height: 1.04;
+
+    letter-spacing: -0.045em;
+  }
+
+
+  .visual-light .visual-copy {
+    color: #153261;
+  }
+
+
+  .visual-dark .visual-copy {
+    color: #edf3ff;
+  }
+
+
+
+  /* =========================================================
+     MOUNTAINS
+     ========================================================= */
+
+  .mountains {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 62%;
+  }
+
+
+  .mountains-light path:first-child {
+    fill:
+      rgba(84, 129, 193, 0.18);
+  }
+
+
+  .mountains-light path:last-child {
+    fill: none;
+
+    stroke:
+      rgba(70, 111, 171, 0.24);
+
+    stroke-width: 2;
+  }
+
+
+  .mountains-dark path:first-child {
+    fill:
+      rgba(56, 95, 151, 0.55);
+  }
+
+
+  .mountains-dark path:last-child {
+    fill:
+      rgba(30, 58, 96, 0.72);
+  }
+
+
+
+  /* =========================================================
+     ARTICLE TEXT
+     ========================================================= */
+
+  .article-meta {
+    margin-top: 19px;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color:
+      var(--text-secondary, #667085);
+
+    font-size: 0.56rem;
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+  }
+
+
+  .article-card h3 {
+    max-width: 540px;
+
+    margin:
+      12px
+      0
+      0;
+
+    color:
+      var(--text-primary, #17243b);
+
+    font-size: 1.28rem;
+    font-weight: 570;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.03em;
+  }
+
+
+  .article-card > p {
+    max-width: 530px;
+
+    margin:
+      9px
+      0
+      0;
+
+    padding-right: 36px;
+
+    color:
+      var(--text-secondary, #667085);
+
+    font-size: 0.84rem;
+
+    line-height: 1.6;
+  }
+
+
+  .article-arrow {
+    position: absolute;
+
+    right: 2px;
+    bottom: 1px;
+
+    color:
+      var(--text-secondary, #667085);
+
+    font-size: 1.15rem;
+
+    transition:
+      transform 200ms ease,
+      color 200ms ease;
+  }
+
+
+  .article-card:hover .article-arrow {
+    color:
+      var(--accent, #315bd6);
+
+    transform:
+      translate(3px, -3px);
+  }
+
+
+  .article-card:hover .article-visual {
+    border-color:
+      rgba(49, 91, 214, 0.25);
+  }
+
+
+
+  /* =========================================================
+     DESKTOP — ONE VIEWPORT
+     ========================================================= */
+
+  @media (min-width: 901px) {
+
+    .journal {
+      height: 100svh;
+      min-height: 0;
+
+      display: flex;
+
+      overflow: hidden;
+    }
+
+
+    .journal-inner {
+      height: 100%;
+      min-height: 0;
+
+      padding:
+        36px
+        0
+        30px;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+    }
+
+
+    .journal-heading {
+      flex: 0 0 auto;
+
+      margin-bottom: 25px;
+    }
+
+
+    .section-label {
+      margin-bottom: 10px;
+    }
+
+
+    .journal-heading h2 {
+      font-size:
+        clamp(2.8rem, 4vw, 4.1rem);
+    }
+
+
+    .journal-grid {
+      flex: 0 0 auto;
+    }
+
+
+    .article-visual {
+      height: 265px;
+    }
+
+
+    .visual-copy {
+      padding:
+        28px
+        30px;
+    }
+
+
+    .article-meta {
+      margin-top: 14px;
+    }
+
+
+    .article-card h3 {
+      margin-top: 9px;
+
+      font-size: 1.18rem;
+    }
+
+
+    .article-card > p {
+      margin-top: 6px;
+
+      font-size: 0.79rem;
+
+      line-height: 1.5;
+    }
+
+  }
+
+
+
+  /* =========================================================
+     DARK MODE
+     ========================================================= */
+
+  :global(html[data-theme="dark"]) .visual-light {
+    background:
+      linear-gradient(
+        145deg,
+        #dce6f7,
+        #bfcfe8
+      );
+  }
+
+
+
+  /* =========================================================
+     TABLET
+     ========================================================= */
+
+  @media (max-width: 900px) {
+
+    .journal-inner {
+      width:
+        min(100% - 40px, 720px);
+
+      padding:
+        92px
+        0
+        104px;
+    }
+
+
+    .journal-heading {
+      align-items: flex-start;
+
+      flex-direction: column;
+
+      gap: 22px;
+    }
+
+
+    .journal-grid {
+      grid-template-columns: 1fr;
+
+      gap: 48px;
+    }
+
+
+    .article-visual {
+      height: 340px;
+    }
+
+  }
+
+
+
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+
+  @media (max-width: 600px) {
+
+    .journal-inner {
+      width:
+        calc(100% - 30px);
+
+      padding:
+        80px
+        0
+        92px;
+    }
+
+
+    .journal-heading {
+      margin-bottom: 34px;
+    }
+
+
+    .journal-heading h2 {
+      font-size:
+        clamp(2.65rem, 13vw, 4rem);
+    }
+
+
+    .article-visual {
+      height: 260px;
+
+      border-radius: 21px;
+    }
+
+
+    .visual-copy {
+      padding:
+        26px
+        24px;
+
+      font-size: 1.8rem;
+    }
+
+
+    .article-card h3 {
+      padding-right: 28px;
+    }
+
+
+    .article-card > p {
+      padding-right: 30px;
+    }
+
+  }
+
+</style>

@@ -1,39 +1,55 @@
+/* Shared colors: light is the fallback appearance. */
 :root {
-  /* Core surfaces */
+  color-scheme: light;
+
+  --page-bg: #f2f4f8;
+  --surface: #e7ecf3;
+  --surface-raised: #f8f9fc;
+  --text-primary: #17243b;
+  --text-secondary: #536178;
+  --accent: #315bd6;
+  --accent-text: #ffffff;
+  --line: #d3dbe7;
+  --menu-shadow: 0 18px 50px rgba(23, 36, 59, 0.12);
+
+  /* Preserve existing component colors during the theme migration. */
   --black: #090909;
   --black-soft: #111111;
-
   --paper: #f2f1ed;
   --paper-deep: #e9e7e1;
-
-  /* Text */
   --text-light: #f5f5f5;
   --text-dark: #111111;
-
   --muted-light: #8c8c8c;
   --muted-dark: #68665f;
-
-  /* Borders */
   --border-dark: rgba(255, 255, 255, 0.09);
-  --border-light: rgba(0, 0, 0, 0.10);
+  --border-light: rgba(0, 0, 0, 0.1);
 
-  /* Layout */
+  /* Shared layout and shape settings. */
   --container: 1240px;
-
-  /* Shape */
   --radius-small: 14px;
   --radius-medium: 22px;
   --radius-large: 26px;
   --radius-pill: 999px;
-
-  /* Motion */
   --transition-fast: 160ms ease;
   --transition-medium: 180ms ease;
 }
 
+/* Activated by the saved choice or the device preference. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
 
-/* Reset */
+  --page-bg: #111827;
+  --surface: #192333;
+  --surface-raised: #202c3e;
+  --text-primary: #e9edf5;
+  --text-secondary: #acb8ca;
+  --accent: #94b0ff;
+  --accent-text: #111827;
+  --line: #344157;
+  --menu-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
 
+/* Basic page reset. */
 *,
 *::before,
 *::after {
@@ -43,7 +59,6 @@
 html {
   margin: 0;
   padding: 0;
-
   scroll-behavior: smooth;
 }
 
@@ -60,8 +75,8 @@ body {
     "Segoe UI",
     sans-serif;
 
-  background: var(--black);
-  color: var(--text-light);
+  background: var(--page-bg);
+  color: var(--text-primary);
 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -79,6 +94,19 @@ a {
 }
 
 ::selection {
-  background: var(--text-light);
-  color: var(--black);
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+/* Keep keyboard navigation visible. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Respect visitors who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
