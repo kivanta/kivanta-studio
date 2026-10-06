@@ -110,3 +110,10 @@ a {
     scroll-behavior: auto;
   }
 }
+
+/* Dark-mode section rhythm */
+:root[data-theme="dark"] #services,
+:root[data-theme="dark"] #about,
+:root[data-theme="dark"] #journal {
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
