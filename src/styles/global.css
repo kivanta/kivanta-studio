@@ -113,7 +113,6 @@ a {
 
 /* Dark-mode section rhythm */
 :root[data-theme="dark"] #services,
-:root[data-theme="dark"] #about,
-:root[data-theme="dark"] #journal {
+:root[data-theme="dark"] #about {
   border-top: 1px solid rgba(255, 255, 255, 0.055);
 }

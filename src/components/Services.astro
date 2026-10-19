@@ -9,13 +9,13 @@
       </p>
 
       <h2>
-        Focused work.<br />
-        Built to be useful.
+        What we can<br />
+        build.
       </h2>
 
       <p class="section-intro">
-        From premium websites to digital products and lightweight systems —
-        we build only what needs to exist, and make its purpose clear.
+        A new site, a redesign, or a small web application.
+        Each project is scoped to that work.
       </p>
 
     </div>
@@ -34,22 +34,16 @@
         <div class="service-copy">
 
           <h3>
-            Premium Websites
+            New business websites
           </h3>
 
           <p>
-            Distinctive, fast websites built around positioning,
-            clarity, and a strong digital presence.
+            A site for a service business that explains the offer,
+            shows the work, and gives customers a clear way to
+            get in touch.
           </p>
 
         </div>
-
-        <span
-          class="service-arrow"
-          aria-hidden="true"
-        >
-          ↗
-        </span>
 
       </article>
 
@@ -64,22 +58,16 @@
         <div class="service-copy">
 
           <h3>
-            Digital Products
+            Website redesigns and landing pages
           </h3>
 
           <p>
-            Focused web products shaped around one real problem,
-            useful workflow, or clear market opportunity.
+            A clearer structure for an existing site, or one page
+            for a single service, with the offer and the next
+            step easy to find.
           </p>
 
         </div>
-
-        <span
-          class="service-arrow"
-          aria-hidden="true"
-        >
-          ↗
-        </span>
 
       </article>
 
@@ -94,22 +82,15 @@
         <div class="service-copy">
 
           <h3>
-            Systems & Experiments
+            Small web applications
           </h3>
 
           <p>
-            Lean prototypes, practical automation, and experiments
-            designed to test ideas early.
+            A small web application for one task, such as a form,
+            a simple dashboard, or a focused tool.
           </p>
 
         </div>
-
-        <span
-          class="service-arrow"
-          aria-hidden="true"
-        >
-          ↗
-        </span>
 
       </article>
 
@@ -141,9 +122,8 @@
     margin: 0 auto;
 
     padding:
-      clamp(92px, 10vw, 140px)
-      0
-      clamp(96px, 10vw, 144px);
+      clamp(72px, 8vw, 112px)
+      0;
   }
 
 
@@ -234,8 +214,6 @@
   .service-card {
     position: relative;
 
-    min-height: 270px;
-
     padding:
       27px
       27px
@@ -252,26 +230,6 @@
 
     background:
       var(--surface, #ffffff);
-
-    transition:
-      transform 220ms ease,
-      border-color 220ms ease,
-      box-shadow 220ms ease;
-  }
-
-
-  .service-card:hover {
-    transform:
-      translateY(-4px);
-
-    border-color:
-      rgba(49, 91, 214, 0.25);
-
-    box-shadow:
-      0
-      24px
-      65px
-      rgba(20, 35, 70, 0.09);
   }
 
 
@@ -299,9 +257,7 @@
      ========================================================= */
 
   .service-copy {
-    margin-top: auto;
-
-    padding-top: 55px;
+    margin-top: 36px;
   }
 
 
@@ -339,142 +295,6 @@
 
 
   /* =========================================================
-     ARROW
-     ========================================================= */
-
-  .service-arrow {
-    position: absolute;
-
-    right: 25px;
-    bottom: 23px;
-
-    color:
-      var(--text-secondary, #667085);
-
-    font-size: 1.05rem;
-
-    opacity: 0.72;
-
-    transition:
-      color 200ms ease,
-      transform 200ms ease;
-  }
-
-
-  .service-card:hover .service-arrow {
-    color:
-      var(--accent, #315bd6);
-
-    transform:
-      translate(3px, -3px);
-  }
-
-
-
-  /* =========================================================
-     DARK MODE
-     ========================================================= */
-
-  :global(html[data-theme="dark"]) .service-card {
-    box-shadow: none;
-  }
-
-
-  :global(html[data-theme="dark"]) .service-card:hover {
-    border-color:
-      rgba(111, 147, 255, 0.26);
-
-    box-shadow:
-      0
-      24px
-      70px
-      rgba(0, 0, 0, 0.14);
-  }
-
-
-
-  /* =========================================================
-     DESKTOP — ONE VIEWPORT LOCK
-     ========================================================= */
-
-  @media (min-width: 901px) {
-
-    .services {
-      height: 100svh;
-      min-height: 0;
-
-      display: flex;
-
-      overflow: hidden;
-    }
-
-
-    .services-inner {
-      height: 100%;
-      min-height: 0;
-
-      padding:
-        40px
-        0
-        34px;
-
-      display: flex;
-      flex-direction: column;
-
-      justify-content: center;
-    }
-
-
-    .services-heading {
-      flex: 0 0 auto;
-
-      margin-bottom: 34px;
-    }
-
-
-    .section-label {
-      margin-bottom: 11px;
-    }
-
-
-    .services-heading h2 {
-      font-size:
-        clamp(2.85rem, 4.2vw, 4.25rem);
-
-      line-height: 0.96;
-    }
-
-
-    .section-intro {
-      max-width: 620px;
-
-      margin-top: 17px;
-
-      font-size: 0.88rem;
-
-      line-height: 1.55;
-    }
-
-
-    .services-grid {
-      flex: 0 0 auto;
-    }
-
-
-    .service-card {
-      min-height: 245px;
-    }
-
-
-    .service-copy {
-      padding-top: 42px;
-    }
-
-  }
-
-
-
-  /* =========================================================
      TABLET
      ========================================================= */
 
@@ -485,9 +305,8 @@
         min(100% - 40px, 720px);
 
       padding:
-        92px
-        0
-        104px;
+        clamp(72px, 8vw, 112px)
+        0;
     }
 
 
@@ -502,10 +321,6 @@
       gap: 16px;
     }
 
-
-    .service-card {
-      min-height: 230px;
-    }
 
   }
 
@@ -522,9 +337,8 @@
         calc(100% - 30px);
 
       padding:
-        80px
-        0
-        92px;
+        72px
+        0;
     }
 
 
@@ -545,8 +359,6 @@
 
 
     .service-card {
-      min-height: 215px;
-
       padding:
         23px
         22px;
@@ -556,7 +368,7 @@
 
 
     .service-copy {
-      padding-top: 38px;
+      margin-top: 28px;
     }
 
 
@@ -566,15 +378,7 @@
 
 
     .service-card p {
-      padding-right: 26px;
-
       font-size: 0.84rem;
-    }
-
-
-    .service-arrow {
-      right: 21px;
-      bottom: 20px;
     }
 
   }

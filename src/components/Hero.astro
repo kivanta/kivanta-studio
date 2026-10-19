@@ -1,7 +1,6 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-inner">
 
-    <!-- COPY -->
     <div class="hero-copy">
 
       <p class="hero-eyebrow">
@@ -13,8 +12,9 @@
       </h1>
 
       <p class="hero-description">
-        Thoughtful websites that help people understand your business,
-        trust your work, and get in touch.
+        We design and build fast, modern websites for service
+        businesses, so customers can understand the offer and
+        take the next step.
       </p>
 
       <div class="hero-actions">
@@ -37,173 +37,34 @@
 
     </div>
 
-
-    <!-- KIVANTA SCOUT SHOWCASE -->
     <figure class="hero-showcase">
 
-      <div class="device-stage">
+      <div class="preview">
 
-        <div class="desktop-device">
-
-          <div class="desktop-screen">
-
-            <div class="scout-app">
-
-              <!-- SCOUT NAV -->
-              <div class="scout-nav">
-
-                <div class="scout-brand">
-                  <span>KIVANTA</span>
-                  <strong>SCOUT</strong>
-                </div>
-
-                <div class="scout-nav-links">
-                  <span>Methodology</span>
-                  <span>Evidence</span>
-                  <span>About</span>
-                </div>
-
-              </div>
-
-
-              <!-- SCOUT HERO -->
-              <div class="scout-hero">
-
-                <p class="scout-eyebrow">
-                  TECHNOCORE · EVIDENCE BEFORE CLAIMS
-                </p>
-
-                <h2>
-                  See what the agent<br />
-                  is built to do.
-                </h2>
-
-                <p class="scout-copy">
-                  Scout reads the public code — and shows what
-                  it can and can't establish.
-                </p>
-
-                <div class="scout-input">
-
-                  <span class="scout-placeholder">
-                    github.com/... or did:key:...
-                  </span>
-
-                  <span class="scout-button">
-                    Investigate
-                  </span>
-
-                </div>
-
-              </div>
-
-
-              <!-- ACTIVITY STRIP -->
-              <div class="scout-activity">
-
-                <span>
-                  <i></i>
-                  REPOSITORIES INVESTIGATED
-                </span>
-
-                <span>
-                  <i></i>
-                  EVIDENCE CHECKED
-                </span>
-
-                <span>
-                  <i></i>
-                  SOURCES VERIFIED
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="desktop-stand" aria-hidden="true"></div>
-          <div class="desktop-base" aria-hidden="true"></div>
-
+        <div class="preview-bar">
+          <span class="preview-dots" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+          <span class="preview-domain">Lumen Haul</span>
         </div>
 
-
-        <!-- FLOATING ANALYSIS CARD -->
-        <div class="evidence-card" aria-hidden="true">
-
-          <div class="evidence-header">
-
-            <span>
-              SCOUT ANALYSIS
-            </span>
-
-            <span class="evidence-live">
-              <i></i>
-              READY
-            </span>
-
-          </div>
-
-
-          <div class="evidence-row">
-
-            <div>
-              <span>BEHAVIOR</span>
-
-              <strong>
-                Tool purpose established
-              </strong>
-            </div>
-
-            <span class="evidence-status">
-              FOUND
-            </span>
-
-          </div>
-
-
-          <div class="evidence-row">
-
-            <div>
-              <span>SOURCE</span>
-
-              <strong>
-                Public source identified
-              </strong>
-            </div>
-
-            <span class="evidence-status">
-              VERIFIED
-            </span>
-
-          </div>
-
-
-          <div class="evidence-row">
-
-            <div>
-              <span>EVIDENCE</span>
-
-              <strong>
-                Material facts supported
-              </strong>
-            </div>
-
-            <span class="evidence-status ready">
-              READY
-            </span>
-
-          </div>
-
+        <div class="preview-screen">
+          <img
+            src="/images/work/lumen-haul-hero.jpg"
+            width="2000"
+            height="785"
+            alt="Lumen Haul website, with the headline Junk gone. Space back. beside an illustration of a loaded truck."
+          />
         </div>
 
       </div>
 
-
       <figcaption>
-        Kivanta Scout
+        Lumen Haul
         <span aria-hidden="true">—</span>
-        Studio product
+        Fictional demo
       </figcaption>
 
     </figure>
@@ -211,1083 +72,244 @@
   </div>
 </section>
 
-
 <style>
-
-  /* =========================================================
-     HERO
-     ========================================================= */
-
   .hero {
     width: 100%;
-
     overflow-x: clip;
-
-    background:
-      var(--page-bg);
-
-    color:
-      var(--text-primary);
+    background: var(--page-bg);
+    color: var(--text-primary);
   }
-
 
   .hero-inner {
-    width:
-      min(var(--container), calc(100% - 64px));
-
-    margin:
-      0
-      auto;
-
-    padding:
-      56px
-      0;
+    width: min(var(--container), calc(100% - 64px));
+    margin: 0 auto;
+    padding: clamp(36px, 5vh, 64px) 0 clamp(40px, 6vh, 72px);
 
     display: grid;
-
-    grid-template-columns:
-      minmax(0, 1.08fr)
-      minmax(0, 0.92fr);
-
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 42%);
     align-items: center;
-
-    gap:
-      clamp(32px, 4vw, 64px);
+    gap: clamp(28px, 3.2vw, 56px);
   }
-
-
-  .hero-copy,
-  .hero-showcase {
-    min-width: 0;
-  }
-
-
-
-  /* =========================================================
-     COPY
-     ========================================================= */
 
   .hero-eyebrow {
-    margin:
-      0
-      0
-      18px;
-
-    color:
-      var(--text-secondary);
-
+    margin: 0 0 18px;
+    color: var(--text-secondary);
     font-size: 0.7rem;
     font-weight: 600;
-
     line-height: 1.5;
-
     letter-spacing: 0.15em;
-
     text-transform: uppercase;
   }
 
-
   #hero-title {
-    max-width: 680px;
-
+    max-width: 11.5em;
     margin: 0;
-
-    color:
-      var(--text-primary);
-
-    font-size:
-      clamp(2rem, 3.6vw, 3.5rem);
-
+    color: var(--text-primary);
+    font-size: clamp(2.35rem, 2.9vw, 3.35rem);
     font-weight: 600;
-
     line-height: 1.08;
-
-    letter-spacing: -0.055em;
-
-    overflow-wrap: normal;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
   }
 
-
   .hero-description {
-    max-width: 450px;
-
-    margin:
-      20px
-      0
-      0;
-
-    color:
-      var(--text-secondary);
-
+    max-width: 540px;
+    margin: 20px 0 0;
+    color: var(--text-secondary);
     font-size: 1rem;
-
     line-height: 1.65;
   }
 
-
-
-  /* =========================================================
-     ACTIONS
-     ========================================================= */
-
   .hero-actions {
     margin-top: 24px;
-
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
-    gap:
-      14px
-      24px;
+    gap: 14px 24px;
   }
-
 
   .hero-primary,
   .hero-secondary {
     min-height: 48px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     gap: 12px;
-
     font-size: 0.9rem;
     font-weight: 500;
-
     line-height: 1.4;
-
     text-decoration: none;
   }
 
-
   .hero-primary {
-    padding:
-      13px
-      20px;
-
-    color:
-      var(--accent-text);
-
-    background:
-      var(--accent);
-
-    border:
-      1px solid transparent;
-
+    padding: 13px 20px;
+    color: var(--accent-text);
+    background: var(--accent);
+    border: 1px solid transparent;
     border-radius: 8px;
   }
 
-
   .hero-secondary {
-    color:
-      var(--accent);
+    color: var(--accent);
   }
-
 
   .hero-primary:hover,
   .hero-secondary:hover {
     text-decoration: underline;
-
     text-underline-offset: 4px;
   }
 
-
   .hero-note {
-    margin:
-      16px
-      0
-      0;
-
-    color:
-      var(--text-secondary);
-
+    margin: 16px 0 0;
+    color: var(--text-secondary);
     font-size: 0.78rem;
-
     line-height: 1.6;
   }
 
-
-
-  /* =========================================================
-     SHOWCASE
-     ========================================================= */
-
   .hero-showcase {
     width: 100%;
-    max-width: 500px;
-
+    min-width: 0;
     margin: 0;
-
-    justify-self: center;
   }
 
-
-  .device-stage {
-    position: relative;
-
-    width: 100%;
-
-    padding:
-      16px
-      42px
-      24px
-      0;
-  }
-
-
-  .desktop-device {
-    width: 100%;
-    min-width: 0;
-  }
-
-
-  .desktop-screen {
-    width: 100%;
-
+  .preview {
     overflow: hidden;
-
-    background:
-      #080d15;
-
-    border:
-      6px solid
-      var(--line);
-
-    border-radius: 12px;
-
-    box-shadow:
-      0
-      18px
-      46px
-      rgb(0 0 0 / 14%);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface-raised);
+    box-shadow: 0 16px 40px rgba(20, 30, 55, 0.1);
   }
 
-
-
-  /* =========================================================
-     SCOUT APP
-     ========================================================= */
-
-  .scout-app {
-    position: relative;
-
-    width: 100%;
-    min-width: 0;
-
-    min-height: 365px;
-
-    display: flex;
-    flex-direction: column;
-
-    overflow: hidden;
-
-    background:
-      radial-gradient(
-        circle at 60% 24%,
-        rgba(49, 91, 214, 0.14),
-        transparent 33%
-      ),
-      #080d15;
+  :global(html[data-theme="dark"]) .preview {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
   }
 
-
-
-  /* =========================================================
-     SCOUT NAV
-     ========================================================= */
-
-  .scout-nav {
-    height: 50px;
-
-    padding:
-      0
-      20px;
-
-    display: flex;
+  .preview-bar {
+    height: 42px;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
-
-    gap: 12px;
-
-    flex: 0 0 auto;
-
-    border-bottom:
-      1px solid
-      rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
   }
 
-
-  .scout-brand {
-    min-width: 0;
-
+  .preview-dots {
     display: flex;
-    align-items: baseline;
-
-    gap: 5px;
+    gap: 6px;
   }
 
-
-  .scout-brand span {
-    color:
-      #66738a;
-
-    font-size: 0.50rem;
-    font-weight: 700;
-
-    letter-spacing: 0.11em;
-  }
-
-
-  .scout-brand strong {
-    color:
-      #eef3fb;
-
-    font-size: 0.64rem;
-  }
-
-
-  .scout-nav-links {
-    min-width: 0;
-
-    display: flex;
-
-    gap: 15px;
-
-    color:
-      #67748a;
-
-    font-size: 0.43rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.06em;
-  }
-
-
-
-  /* =========================================================
-     SCOUT HERO
-     ========================================================= */
-
-  .scout-hero {
-    min-width: 0;
-
-    flex: 1;
-
-    padding:
-      55px
-      34px
-      46px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-  }
-
-
-  .scout-eyebrow {
-    margin:
-      0
-      0
-      13px;
-
-    color:
-      #448df0;
-
-    font-size: 0.47rem;
-    font-weight: 700;
-
-    letter-spacing: 0.12em;
-  }
-
-
-  .scout-hero h2 {
-    margin: 0;
-
-    color:
-      #f1f4fa;
-
-    font-size:
-      clamp(1.55rem, 2.4vw, 2.1rem);
-
-    font-weight: 530;
-
-    line-height: 1.03;
-
-    letter-spacing: -0.045em;
-  }
-
-
-  .scout-copy {
-    max-width: 330px;
-
-    margin:
-      13px
-      auto
-      0;
-
-    color:
-      #758196;
-
-    font-size: 0.57rem;
-
-    line-height: 1.65;
-  }
-
-
-  .scout-input {
-    width:
-      min(360px, 92%);
-
-    min-width: 0;
-
-    margin-top: 28px;
-
-    padding:
-      7px
-      8px
-      7px
-      14px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 12px;
-
-    color:
-      #56647a;
-
-    font-size: 0.49rem;
-
-    border:
-      1px solid
-      rgba(255, 255, 255, 0.10);
-
-    border-radius: 8px;
-
-    background:
-      rgba(255, 255, 255, 0.025);
-  }
-
-
-  .scout-placeholder {
-    min-width: 0;
-
-    overflow: hidden;
-
-    white-space: nowrap;
-
-    text-overflow: ellipsis;
-  }
-
-
-  .scout-button {
-    flex: 0 0 auto;
-
-    padding:
-      8px
-      11px;
-
-    color:
-      #e7efff;
-
-    border-radius: 5px;
-
-    background:
-      #2d66c9;
-  }
-
-
-
-  /* =========================================================
-     ACTIVITY STRIP
-     ========================================================= */
-
-  .scout-activity {
-    width: 100%;
-    height: 32px;
-
-    min-width: 0;
-
-    padding:
-      0
-      14px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 18px;
-
-    overflow: hidden;
-
-    flex: 0 0 auto;
-
-    border-top:
-      1px solid
-      rgba(255, 255, 255, 0.05);
-
-    color:
-      #58667b;
-
-    font-size: 0.37rem;
-    font-weight: 700;
-
-    letter-spacing: 0.06em;
-  }
-
-
-  .scout-activity span {
-    min-width: 0;
-
-    display: flex;
-    align-items: center;
-
-    gap: 5px;
-
-    white-space: nowrap;
-  }
-
-
-  .scout-activity i {
-    width: 4px;
-    height: 4px;
-
-    flex: 0 0 auto;
-
+  .preview-dots i {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-
-    background:
-      #55dca2;
+    background: var(--text-secondary);
+    opacity: 0.35;
   }
 
-
-
-  /* =========================================================
-     MONITOR
-     ========================================================= */
-
-  .desktop-stand {
-    width: 20%;
-    height: 30px;
-
-    margin:
-      0
-      auto;
-
-    background:
-      var(--line);
-
-    clip-path:
-      polygon(
-        22% 0,
-        78% 0,
-        100% 100%,
-        0 100%
-      );
+  .preview-domain {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    letter-spacing: 0.01em;
   }
 
-
-  .desktop-base {
-    width: 38%;
-    height: 7px;
-
-    margin:
-      0
-      auto;
-
-    background:
-      var(--line);
-
-    border-radius: 50%;
+  .preview-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
-
-
-
-  /* =========================================================
-     FLOATING EVIDENCE CARD
-     ========================================================= */
-
-  .evidence-card {
-    position: absolute;
-
-    right: 0;
-    bottom: 28px;
-
-    width: 42%;
-    max-width: 190px;
-
-    min-width: 0;
-
-    padding: 12px;
-
-    overflow: hidden;
-
-    color:
-      #e6ebf4;
-
-    border:
-      1px solid
-      rgba(255, 255, 255, 0.10);
-
-    border-radius: 15px;
-
-    background:
-      rgba(19, 28, 42, 0.97);
-
-    box-shadow:
-      0
-      18px
-      42px
-      rgba(0, 0, 0, 0.30);
-  }
-
-
-  .evidence-header {
-    padding:
-      2px
-      2px
-      10px;
-
-    display: flex;
-    justify-content: space-between;
-
-    gap: 8px;
-
-    color:
-      #748198;
-
-    font-size: 0.40rem;
-    font-weight: 700;
-
-    letter-spacing: 0.08em;
-  }
-
-
-  .evidence-live {
-    flex: 0 0 auto;
-
-    display: flex;
-    align-items: center;
-
-    gap: 4px;
-
-    color:
-      #77d9aa;
-  }
-
-
-  .evidence-live i {
-    width: 4px;
-    height: 4px;
-
-    border-radius: 50%;
-
-    background:
-      #57dca2;
-  }
-
-
-  .evidence-row {
-    min-width: 0;
-
-    padding:
-      10px
-      2px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 8px;
-
-    border-top:
-      1px solid
-      rgba(255, 255, 255, 0.065);
-  }
-
-
-  .evidence-row > div {
-    min-width: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 3px;
-  }
-
-
-  .evidence-row span {
-    color:
-      #748198;
-
-    font-size: 0.36rem;
-
-    letter-spacing: 0.06em;
-  }
-
-
-  .evidence-row strong {
-    color:
-      #ccd4e1;
-
-    font-size: 0.45rem;
-    font-weight: 500;
-
-    line-height: 1.25;
-  }
-
-
-  .evidence-status {
-    flex: 0 0 auto;
-
-    padding:
-      4px
-      5px;
-
-    border:
-      1px solid
-      rgba(255, 255, 255, 0.08);
-
-    border-radius: 999px;
-  }
-
-
-  .evidence-status.ready {
-    color:
-      #66dba5;
-  }
-
-
-
-  /* =========================================================
-     CAPTION
-     ========================================================= */
 
   figcaption {
-    margin-top: 4px;
-
-    color:
-      var(--text-secondary);
-
+    margin: 12px 0 0;
+    color: var(--text-secondary);
     font-size: 0.75rem;
-
     line-height: 1.5;
-
-    text-align: center;
   }
 
-
-
-  /* =========================================================
-     DESKTOP
-     ========================================================= */
-
-  @media (min-width: 901px) {
-
-    .hero {
-      min-height:
-        calc(100svh - 73px);
-
-      display: flex;
-      align-items: center;
-    }
-
-
+  @media (min-width: 981px) {
     .hero-inner {
-      padding:
-        clamp(20px, 4svh, 48px)
-        0;
+      padding-bottom: 28px;
     }
-
-
-    .hero-showcase {
-      max-width:
-        min(500px, 65svh);
-    }
-
   }
 
-
-
-  /* =========================================================
-     TABLET
-     ========================================================= */
-
-  @media (max-width: 900px) {
-
+  @media (max-width: 980px) {
     .hero-inner {
-      grid-template-columns: 1fr;
-
-      gap: 36px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
     }
-
-
-    .hero-copy {
-      max-width: 620px;
-    }
-
 
     #hero-title {
-      font-size:
-        clamp(2.5rem, 6vw, 3.5rem);
+      max-width: 14em;
+      font-size: clamp(2.2rem, 5.4vw, 3.15rem);
     }
-
 
     .hero-showcase {
-      max-width: 560px;
+      max-width: 520px;
     }
-
   }
 
-
-
-  /* =========================================================
-     MOBILE
-     ========================================================= */
+  @media (max-width: 820px) {
+    .hero-inner {
+      width: calc(100% - 32px);
+    }
+  }
 
   @media (max-width: 600px) {
-
     .hero-inner {
-      width:
-        calc(100% - 32px);
-
-      padding:
-        42px
-        0
-        48px;
-
+      padding: 42px 0 48px;
       gap: 28px;
     }
 
-
     .hero-eyebrow {
       margin-bottom: 14px;
-
       font-size: 0.65rem;
-
       letter-spacing: 0.12em;
     }
 
-
     #hero-title {
-      width: 100%;
-
-      font-size:
-        clamp(2rem, 9vw, 3rem);
-
-      line-height: 1.08;
+      max-width: none;
+      font-size: clamp(2rem, 8.6vw, 2.7rem);
     }
 
-
     .hero-description {
-      width: 100%;
-
       margin-top: 18px;
-
       font-size: 0.95rem;
     }
 
-
     .hero-actions {
       width: 100%;
-
       margin-top: 22px;
-
       flex-direction: column;
       align-items: stretch;
-
       gap: 8px;
     }
-
 
     .hero-primary,
     .hero-secondary {
       width: 100%;
     }
 
-
     .hero-secondary {
       min-height: 42px;
     }
-
 
     .hero-note {
       margin-top: 13px;
     }
 
-
     .hero-showcase {
-      width: 100%;
-      max-width: 100%;
-
-      justify-self: stretch;
+      max-width: none;
     }
 
-
-    .device-stage {
-      width: 100%;
-
-      padding:
-        12px
-        28px
-        22px
-        0;
+    .preview-bar {
+      height: 34px;
     }
-
-
-    .desktop-device {
-      width: 100%;
-    }
-
-
-    .desktop-screen {
-      border-width: 5px;
-
-      border-radius: 10px;
-    }
-
-
-    .scout-app {
-      min-height: 300px;
-    }
-
-
-    .scout-nav {
-      height: 43px;
-
-      padding:
-        0
-        14px;
-    }
-
-
-    .scout-nav-links {
-      display: none;
-    }
-
-
-    .scout-hero {
-      padding:
-        38px
-        18px
-        34px;
-    }
-
-
-    .scout-eyebrow {
-      font-size: 0.42rem;
-    }
-
-
-    .scout-hero h2 {
-      font-size: 1.55rem;
-    }
-
-
-    .scout-copy {
-      max-width: 260px;
-
-      font-size: 0.50rem;
-    }
-
-
-    .scout-input {
-      width: 92%;
-
-      margin-top: 22px;
-
-      padding:
-        6px
-        7px
-        6px
-        10px;
-
-      gap: 8px;
-    }
-
-
-    .scout-button {
-      padding:
-        7px
-        9px;
-    }
-
-
-    .scout-activity {
-      justify-content: flex-start;
-
-      gap: 12px;
-
-      font-size: 0.32rem;
-    }
-
-
-    .desktop-stand {
-      height: 24px;
-    }
-
-
-    .desktop-base {
-      height: 6px;
-    }
-
-
-    .evidence-card {
-      right: 0;
-      bottom: 27px;
-
-      width: 43%;
-      max-width: 160px;
-
-      padding: 8px;
-
-      border-radius: 12px;
-    }
-
-
-    .evidence-header {
-      padding-bottom: 7px;
-
-      font-size: 0.34rem;
-    }
-
-
-    .evidence-row {
-      padding:
-        7px
-        1px;
-
-      gap: 5px;
-    }
-
-
-    .evidence-row span {
-      font-size: 0.30rem;
-    }
-
-
-    .evidence-row strong {
-      font-size: 0.36rem;
-    }
-
-
-    .evidence-status {
-      padding:
-        3px
-        4px;
-    }
-
-
-    figcaption {
-      font-size: 0.70rem;
-    }
-
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .hero-primary,
+    .hero-secondary {
+      transition: none;
+    }
+  }
 </style>
