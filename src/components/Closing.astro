@@ -13,6 +13,8 @@ const socialLinks = [
 ];
 ---
 
+<div class="closing-band">
+
 <section class="closing" id="contact">
 
   <div class="closing-inner">
@@ -99,8 +101,22 @@ const socialLinks = [
 
 </footer>
 
+</div>
+
 
 <style>
+
+  @media (min-width: 981px) {
+    .closing-band {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .closing {
+      flex: 1 0 auto;
+    }
+  }
 
   .closing {
     display: flex;
