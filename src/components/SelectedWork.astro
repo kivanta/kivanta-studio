@@ -210,6 +210,74 @@
         </div>
       </a>
 
+
+
+      <!-- LUMEN HAUL -->
+      <a
+        class="project-card"
+        href="https://kivanta-lumen-haul-demo.kivantastudio.workers.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="project-visual lumen-visual">
+
+          <div class="tow-browser">
+
+            <div class="tow-browser-bar">
+              <div class="tow-browser-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <span>
+                lumen haul
+              </span>
+
+              <span class="browser-space"></span>
+            </div>
+
+
+            <div class="tow-image-wrap">
+              <img
+                src="/images/work/lumen-haul-desktop.png"
+                alt="Lumen Haul fictional junk-removal demonstration"
+                loading="lazy"
+              />
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-topline">
+            <span>SERVICE WEBSITE</span>
+
+            <span>FICTIONAL DEMO</span>
+          </div>
+
+
+          <div class="project-title-row">
+            <h3>Lumen Haul</h3>
+
+            <span class="project-arrow">
+              ↗
+            </span>
+          </div>
+
+
+          <p>
+            A fictional junk-removal concept with a responsive
+            local-service layout, built in Astro and published
+            on Cloudflare.
+          </p>
+
+        </div>
+      </a>
+
     </div>
 
   </div>
@@ -662,7 +730,8 @@
      TOWSWIFT PREVIEW
      ========================================================= */
 
-  .tow-visual {
+  .tow-visual,
+  .lumen-visual {
     display: flex;
 
     background:
@@ -868,7 +937,8 @@
   }
 
 
-  :global(html[data-theme="dark"]) .tow-visual {
+  :global(html[data-theme="dark"]) .tow-visual,
+  :global(html[data-theme="dark"]) .lumen-visual {
     background:
       linear-gradient(
         145deg,
@@ -1201,6 +1271,52 @@
     font-size: 0.80rem;
 
     line-height: 1.48;
+  }
+
+}
+
+
+/* Three projects stay visible. Wide screens keep one row.
+   Mid-size screens keep the original two-column cards and
+   let this section grow so the third card is not clipped. */
+
+@media (min-width: 901px) and (max-width: 1199px) {
+
+  .work {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+
+
+  .work-inner {
+    height: auto;
+  }
+
+
+  .projects-grid {
+    flex: 0 0 auto;
+  }
+
+
+  .project-card {
+    height: auto;
+  }
+
+
+  .project-visual {
+    flex: 0 0 300px;
+    height: 300px;
+    min-height: 300px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
 }
